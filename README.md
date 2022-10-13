@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-Anna(Analytical Network Adjustment) is an HTTP Inspector tool for Flutter  which can debugging http requests, It catches and stores http requests and responses, which can be viewed via simple UI. It is inspired from Chuck,Chucker and Alice (base code with some improvement).
+Anna(Analytical Network Adjustment) is an HTTP Inspector tool for Flutter  which can debugging http requests, It catches and stores http requests and responses, which can be viewed via simple UI. It is inspired from [Chuck](https://github.com/jgilfelt/chuck), [Chucker](https://github.com/ChuckerTeam/chucker) [Alice](https://github.com/jhomlala/alice) (base code with some improvement).
 
 ## Supported
 
