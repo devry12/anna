@@ -1,12 +1,16 @@
+import 'package:flutter/material.dart';
+
 import 'package:anna/helper/anna_conversion_helper.dart';
 import 'package:anna/helper/anna_parser.dart';
 import 'package:anna/model.dart/anna_http_call.dart';
-import 'package:flutter/material.dart';
 
 class AnnaCallResponseWidget extends StatefulWidget {
   final AnnaHttpCall call;
 
-  const AnnaCallResponseWidget(this.call);
+  const AnnaCallResponseWidget({
+    Key? key,
+    required this.call,
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -17,7 +21,6 @@ class AnnaCallResponseWidget extends StatefulWidget {
 class _AnnaCallResponseWidgetState
     extends State<AnnaCallResponseWidget> {
   static const _imageContentType = "image";
-  static const _videoContentType = "video";
   static const _jsonContentType = "json";
   static const _xmlContentType = "xml";
   static const _textContentType = "text";

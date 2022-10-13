@@ -1,12 +1,16 @@
+import 'package:flutter/material.dart';
+
 import 'package:anna/helper/anna_conversion_helper.dart';
 import 'package:anna/helper/anna_parser.dart';
 import 'package:anna/model.dart/anna_http_call.dart';
-import 'package:flutter/material.dart';
 
 class AnnaCallRequestWidget extends StatefulWidget {
   final AnnaHttpCall call;
 
-  const AnnaCallRequestWidget(this.call);
+  const AnnaCallRequestWidget({
+    Key? key,
+    required this.call,}
+  ) : super(key: key);
 
  @override
   State<StatefulWidget> createState() {

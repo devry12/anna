@@ -1,16 +1,14 @@
-import 'package:anna/core.dart';
-import 'package:anna/debug.dart';
-import 'package:anna/screen/detail_ui.dart';
-import 'package:anna/helper/removedup.dart';
-import 'package:anna/model.dart/anna_http_call.dart';
-import 'package:anna/screen/ui_response.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+import 'package:anna/core.dart';
+import 'package:anna/model.dart/anna_http_call.dart';
+import 'package:anna/screen/detail_ui.dart';
+
 class AnnaCallList extends StatefulWidget {
-  AnnaCore? core;
-  AnnaCallList({this.core});
+  final AnnaCore? core;
+  const AnnaCallList({Key? key, this.core}) : super(key: key);
 
   @override
   State<AnnaCallList> createState() => _AnnaCallListState();
@@ -29,26 +27,22 @@ class _AnnaCallListState extends State<AnnaCallList>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purple,
-        iconTheme: const IconThemeData(color: Colors.white),
-        title: const Text("Anna"),
-      ),
-      body: GetBuilder<AnnaController>(
+          backgroundColor: Colors.purple,
+          iconTheme: const IconThemeData(color: Colors.white),
+          title: const Text("Anna")),
+      body: GetX<AnnaController>(
         init: AnnaController(),
         initState: (_) {},
         builder: (_) {
           var dist = _.callsSubject.reversed.toList();
-
-          return Container(
-            child: ListView.builder(
-                itemCount: dist.length,
-                itemBuilder: ((context, index) {
-                  var data = dist[index];
-                  return AnnaItem(
-                    call: data,
-                  );
-                })),
-          );
+          return ListView.builder(
+              itemCount: dist.length,
+              itemBuilder: ((context, index) {
+                var data = dist[index];
+                return AnnaItem(
+                  call: data,
+                );
+              }));
         },
       ),
     );
@@ -56,8 +50,11 @@ class _AnnaCallListState extends State<AnnaCallList>
 }
 
 class AnnaItem extends StatelessWidget {
-  AnnaHttpCall call;
-  AnnaItem({Key? key, required this.call}) : super(key: key);
+  final AnnaHttpCall call;
+  const AnnaItem({
+    Key? key,
+    required this.call,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

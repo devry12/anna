@@ -153,8 +153,8 @@ class _AnnaDetailState extends State<AnnaDetail>
         ],
       ),
       body: TabBarView(controller: controller, children: <Widget>[
-        AnnaCallRequestWidget(widget.call),
-        AnnaCallResponseWidget(widget.call),
+        AnnaCallRequestWidget(call: widget.call),
+        AnnaCallResponseWidget(call: widget.call),
         AnnaCallErrorWidget(call: widget.call,)
       ]),
     );

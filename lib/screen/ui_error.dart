@@ -1,9 +1,13 @@
-import 'package:anna/model.dart/anna_http_call.dart';
 import 'package:flutter/material.dart';
+
+import 'package:anna/model.dart/anna_http_call.dart';
 
 class AnnaCallErrorWidget extends StatefulWidget {
   final AnnaHttpCall call;
-  const AnnaCallErrorWidget({required this.call});
+  const AnnaCallErrorWidget({
+    Key? key,
+    required this.call,
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
