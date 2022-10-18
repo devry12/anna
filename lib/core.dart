@@ -12,12 +12,6 @@ class AnnaCore {
   AnnaCore({this.navigatorKey, this.maxCallsCount = 100});
   var controller = Get.put(AnnaController());
 
-//  final BehaviorSubject<List<AnnaHttpCall>> callsSubject =
-//       BehaviorSubject.seeded([])..shareValue();
-
-  void dispose() {
-    // callsSubject.close();
-  }
 
   List<AnnaHttpCall> removeDuplicates(List<AnnaHttpCall> call) {
     //create one list to store the distinct models

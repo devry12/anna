@@ -35,14 +35,18 @@ class _AnnaCallListState extends State<AnnaCallList>
         initState: (_) {},
         builder: (_) {
           var dist = _.callsSubject.reversed.toList();
-          return ListView.builder(
-              itemCount: dist.length,
-              itemBuilder: ((context, index) {
-                var data = dist[index];
-                return AnnaItem(
-                  call: data,
-                );
-              }));
+          return dist.isEmpty
+              ? const Center(
+                  child: Text("data not found"),
+                )
+              : ListView.builder(
+                  itemCount: dist.length,
+                  itemBuilder: ((context, index) {
+                    var data = dist[index];
+                    return AnnaItem(
+                      call: data,
+                    );
+                  }));
         },
       ),
     );
