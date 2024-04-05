@@ -8,6 +8,7 @@ import 'package:anna/shake/shake.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 
+
 ///analytics network adjustment
 class Anna {
   GlobalKey<NavigatorState>? navigatorKey;

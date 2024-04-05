@@ -17,7 +17,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dio: ^4.0.6
+  dio: ^5.4.2+1
   anna:
     # When depending on this package from a real application you should use:
     #   anna: ^x.y.z

@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:anna/core.dart';
 import 'package:anna/model.dart/anna_http_call.dart';
 import 'package:anna/screen/detail_ui.dart';
+import 'package:clipboard/clipboard.dart';
 
 class AnnaCallList extends StatefulWidget {
   final AnnaCore? core;
@@ -29,7 +30,7 @@ class _AnnaCallListState extends State<AnnaCallList>
       appBar: AppBar(
           backgroundColor: Colors.purple,
           iconTheme: const IconThemeData(color: Colors.white),
-          title: const Text("Anna")),
+          title: const Text("Anna", style: TextStyle(color: Colors.white))),
       body: GetX<AnnaController>(
         init: AnnaController(),
         initState: (_) {},
@@ -65,6 +66,14 @@ class AnnaItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
+        onLongPress:(){
+          FlutterClipboard.copy(
+                          call.uri)
+                      .then((value) =>
+                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                            content: Text("Success Copied"),
+                          )));
+        },
         onTap: () {
           Navigator.push<void>(
             context,
@@ -136,17 +145,21 @@ class AnnaItem extends StatelessWidget {
 }
 
 Color statusColor(AnnaHttpCall call) {
+  print(call.response!.status is int);
   if (call.response == null) {
     return Colors.red;
   }
   if (call.response!.status == null) {
     return Colors.red;
   }
-  if (call.response!.status! >= 200) {
+  if (call.response!.status! >= 200 && call.response!.status! < 300) {
     return Colors.green;
   }
-  if (call.response!.status! >= 400) {
-    return Colors.yellow;
+  if (call.response!.status! >= 400 && call.response!.status! < 500) {
+    return Colors.orange;
+  }
+  if (call.response!.status! >= 500) {
+    return Colors.red;
   }
   return Colors.red;
 }
