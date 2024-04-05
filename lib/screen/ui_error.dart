@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:anna/model.dart/anna_http_call.dart';
+import 'package:anna/model/anna_http_call.dart';
 
 class AnnaCallErrorWidget extends StatefulWidget {
   final AnnaHttpCall call;

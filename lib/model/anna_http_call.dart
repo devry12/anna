@@ -1,6 +1,6 @@
-import 'package:anna/model.dart/anna_error.dart';
-import 'package:anna/model.dart/anna_request_model.dart';
-import 'package:anna/model.dart/anna_response_model.dart';
+import 'package:anna/model/anna_error.dart';
+import 'package:anna/model/anna_request_model.dart';
+import 'package:anna/model/anna_response_model.dart';
 
 class AnnaHttpCall {
   final int id;

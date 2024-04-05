@@ -1,4 +1,4 @@
-import 'package:anna/model.dart/anna_http_call.dart';
+import 'package:anna/model/anna_http_call.dart';
 import 'package:get/state_manager.dart';
 
 RxList<AnnaHttpCall> removeDuplicates(RxList<AnnaHttpCall> call) {

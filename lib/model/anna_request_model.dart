@@ -1,5 +1,5 @@
-import 'package:anna/model.dart/anna_from_data_field.dart';
-import 'package:anna/model.dart/anna_from_data_file.dart';
+import 'package:anna/model/anna_from_data_field.dart';
+import 'package:anna/model/anna_from_data_file.dart';
 import 'dart:io';
 class AnnaHttpRequest {
   int size = 0;

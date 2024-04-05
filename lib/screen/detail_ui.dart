@@ -1,4 +1,4 @@
-import 'package:anna/model.dart/anna_http_call.dart';
+import 'package:anna/model/anna_http_call.dart';
 import 'package:anna/screen/ui_error.dart';
 import 'package:anna/screen/ui_request.dart';
 import 'package:anna/screen/ui_response.dart';

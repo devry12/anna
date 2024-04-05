@@ -1,7 +1,7 @@
 import 'package:anna/debug.dart';
-import 'package:anna/model.dart/anna_error.dart';
-import 'package:anna/model.dart/anna_http_call.dart';
-import 'package:anna/model.dart/anna_response_model.dart';
+import 'package:anna/model/anna_error.dart';
+import 'package:anna/model/anna_http_call.dart';
+import 'package:anna/model/anna_response_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

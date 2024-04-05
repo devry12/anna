@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import 'package:anna/core.dart';
-import 'package:anna/model.dart/anna_http_call.dart';
+import 'package:anna/model/anna_http_call.dart';
 import 'package:anna/screen/detail_ui.dart';
 import 'package:clipboard/clipboard.dart';
 

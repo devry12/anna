@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:anna/core.dart';
-import 'package:anna/model.dart/anna_error.dart';
-import 'package:anna/model.dart/anna_from_data_field.dart';
-import 'package:anna/model.dart/anna_from_data_file.dart';
-import 'package:anna/model.dart/anna_http_call.dart';
-import 'package:anna/model.dart/anna_request_model.dart';
-import 'package:anna/model.dart/anna_response_model.dart';
+import 'package:anna/model/anna_error.dart';
+import 'package:anna/model/anna_from_data_field.dart';
+import 'package:anna/model/anna_from_data_file.dart';
+import 'package:anna/model/anna_http_call.dart';
+import 'package:anna/model/anna_request_model.dart';
+import 'package:anna/model/anna_response_model.dart';
 import 'package:dio/dio.dart';
 
 InterceptorsWrapper dioInterceptors({required AnnaCore core}) {
